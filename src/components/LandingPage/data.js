@@ -1,7 +1,7 @@
-import Img01 from "@assets/img/img1.jpg";
-import Img02 from "@assets/img/img2.jpg";
-import Img03 from "@assets/img/img3.jpg";
-import Img04 from "@assets/img/portada.png";
+import Img01 from "@assets/img/1.png";
+import Img02 from "@assets/img/2.png";
+import Img03 from "@assets/img/3.png";
+import Img04 from "@assets/img/4.png";
 
 export const lines = [
   {

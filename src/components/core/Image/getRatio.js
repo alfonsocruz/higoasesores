@@ -2,6 +2,7 @@
 
 export default function getRatio(ratio = '1/1') {
   return {
+    '2/3': 'calc(100% / 2 * 3)',
     '4/3': 'calc(100% / 4 * 3)',
     '3/4': 'calc(100% / 3 * 4)',
     '6/4': 'calc(100% / 6 * 4)',
@@ -10,6 +11,7 @@ export default function getRatio(ratio = '1/1') {
     '9/16': 'calc(100% / 9 * 16)',
     '21/9': 'calc(100% / 21 * 9)',
     '9/21': 'calc(100% / 9 * 21)',
+    '12/30': 'calc(100% / 12 * 30)',
     '1/1': '100%',
   }[ratio];
 }

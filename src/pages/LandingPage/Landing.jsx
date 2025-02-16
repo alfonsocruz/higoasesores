@@ -5,6 +5,8 @@ import Cover from "@components/LandingPage/Cover";
 import Description from "@components/LandingPage/Description";
 import ActionLines from "@components/LandingPage/ActionLines";
 import Contact from "@components/LandingPage/Contact";
+import ActionLine from "@components/LandingPage/ActionLine";
+import { lines } from "@components/LandingPage/data";
 
 const Landing = () => {
   return (
@@ -31,6 +33,14 @@ const Landing = () => {
 
       <Box position="relative" overflow="hidden" width="100%" height="auto">
         <ActionLines />
+      </Box>
+
+      <Box position="relative" overflow="hidden" width="100%" height="auto">
+        {
+          lines.map((item, k) => (
+            <ActionLine item={item} key={k} />
+          ))
+        }
       </Box>
 
       <Box

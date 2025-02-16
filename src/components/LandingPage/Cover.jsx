@@ -1,8 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Container from "@components/core/common/Container";
-import portada from "@assets/img/portada.png";
-import Logo from "@assets/img/Logo.png";
+import portada from "@assets/img/portada2.png";
+import Flecha from "@assets/img/flecha.png";
+import Slogan from "@assets/img/slogan.png";
+import Logo from "@assets/img/Higo_logo.png";
 import { useState, useRef, useEffect } from "react";
 
 const Cover = () => {
@@ -28,7 +30,7 @@ const Cover = () => {
           height: "100vh",
           minHeight: "400px",
           maxHeight: {
-            xs: "100%",
+            xs: "10%",
             sm: imageHeight ? `${imageHeight}px` : "100%",
           },
           overflow: "hidden",
@@ -41,7 +43,7 @@ const Cover = () => {
           alt="higoasesores"
           ref={imgRef}
           sx={{
-            width: "100%",
+            width: { xs: 'auto', sm: 'auto', md: '100%', lg: "100%" },
             height: { xs: "100%", sm: "auto" },
             minHeight: "400px",
             position: "absolute",
@@ -56,32 +58,57 @@ const Cover = () => {
       <Container
         sx={{
           position: "absolute",
-          top: "30%",
-          left: { xs: "10%", md: "40%", lg: "55%" },
-          right: 0,
+          top: { xs: "35%", sm: '30%', md: '30%', lg: "30%" },
+          left: { xs: "15%", sm: '25%', md: '35%', lg: '40%' },
+          // right: 0,
         }}
       >
-        <Box bgcolor={"white"} data-aos="fade-right" sx={{ height: 200, p: 2 }}>
-          <Box
-            component="img"
-            src={Logo}
-            alt="logo"
-            sx={{ width: { xs: "250px", sm: "280px" }, pt: 2, pb: 3 }}
-          />
-        </Box>
-        <Box bgcolor={"black"} data-aos="fade-right" sx={{ height: 100, p: 2 }}>
-          <Typography
-            variant="body2"
-            fontSize={{ xs: "1.5rem", md: "2rem" }}
-            width={{ xs: "100%", sm: "100%", md: "500px", lg: "500px" }}
-            pb={1}
-            data-aos="fade-right"
-            color="white"
-          >
-            Innovación en la Consultoría
-          </Typography>
-        </Box>
+        <Box
+          data-aos="fade-up"
+          component="img"
+          src={Logo}
+          alt="logo"
+          sx={{ width: { xs: "250px", sm: "280px" }, pt: 2, pb: 3, }}
+
+        />
+
       </Container>
+
+      <Container
+        sx={{
+          position: "absolute",
+          bottom: '0%',
+          left: '1%',
+          right: '1%'
+          // right: 0,
+        }}
+      >
+        <Stack
+          direction={{ xs: 'column', md: 'row' }}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          mb={2}
+        >
+          <Stack direction={'row'} spacing={2}>
+            <Box
+              component="img"
+              src={Flecha}
+              alt="logo"
+              sx={{ height: { xs: "90px" }, pt: 2, pb: 3 }}
+            />
+            <Box
+              component="img"
+              src={Slogan}
+              alt="logo"
+              sx={{ height: { xs: "90px" }, pt: 2, pb: 3 }}
+            />
+          </Stack>
+          <Typography variant="body2" fontWeight={600}>
+            higoasesores.com
+          </Typography>
+        </Stack>
+      </Container>
+
     </Box>
   );
 };
